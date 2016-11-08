@@ -1,0 +1,37 @@
+{
+  "name": "db-prices-radar",
+  "description": "Collect and store Deutsche Bahn price information for a set of important routes.",
+  "version": "0.1.0",
+  "keywords": [
+    "bahn",
+    "deutsche",
+    "db",
+    "germany",
+    "railway",
+    "train",
+    "prices",
+    "preise",
+    "deutschland"
+  ],
+  "author": "Julius Tens <mail@juliustens.de>",
+  "homepage": "https://github.com/juliuste/db-prices-radar",
+  "repository": "juliuste/db-prices-radar",
+  "bugs": "https://github.com/juliuste/db-prices-radar/issues",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "route.js"
+  ],
+  "dependencies": {
+    "config": "^1.24.0",
+    "db-prices": "^0.1.4",
+    "fs-writefile-promise": "^1.0.3",
+    "moment-timezone": "^0.5.9"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "engine": {
+    "node": ">=6"
+  },
+  "license": "MIT"
+}

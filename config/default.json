@@ -1,0 +1,23 @@
+{
+	"days": 84, // 12 weeks = 12*7
+	"routes": [
+		{"from": 8011160, "to": 8002549}, // Berlin Hbf -> Hamburg Hbf
+		{"from": 8011160, "to": 8000207}, // Berlin Hbf -> Köln Hbf
+		{"from": 8011160, "to": 8000261}, // Berlin Hbf -> München Hbf
+		{"from": 8011160, "to": 8000105}, // Berlin Hbf -> Frankfurt a. M. Hbf
+		{"from": 8011160, "to": 8000096}, // Berlin Hbf -> Stuttgart Hbf
+		{"from": 8011160, "to": 8000085}, // Berlin Hbf -> Düsseldorf Hbf
+		{"from": 8011160, "to": 8000080}, // Berlin Hbf -> Dortmund Hbf
+		{"from": 8011160, "to": 8000098}, // Berlin Hbf -> Essen Hbf
+		{"from": 8011160, "to": 8000050}, // Berlin Hbf -> Bremen Hbf
+		{"from": 8011160, "to": 8010205}, // Berlin Hbf -> Leipzig Hbf
+		{"from": 8011160, "to": 8010085}, // Berlin Hbf -> Dresden Hbf
+		{"from": 8011160, "to": 8000152}, // Berlin Hbf -> Hannover Hbf
+		{"from": 8011160, "to": 8000284}  // Berlin Hbf -> Nürnberg Hbf
+	],
+	"returnTrips": true,
+	"apiOptions": {
+		"class": 2
+	},
+	"outputPath": "./data/" // the path MUST and with '/' and this directory MUST exist 
+}
