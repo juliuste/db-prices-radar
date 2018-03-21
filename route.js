@@ -2,43 +2,36 @@
 
 const moment = require('moment-timezone')
 const prices = require('db-prices')
+const timeout = require('p-timeout')
+const retry = require('p-retry')
 const config = require('config')
 
 const dates = (days) => {
-	const startDate = moment().tz('Europe/Berlin').startOf('day')
+	const startDate = moment()
 	const dateList = []
 	for(let i = 0; i<days; i++){
-		dateList.push(moment(startDate).add(i, 'days'))
+		dateList.push(moment(startDate).add(i, 'days').tz('Europe/Berlin').startOf('day').toDate())
 	}
 	return dateList
 }
 
-const addRoute = (route) => (result) => {
-	return {
-		route: route,
-		data: result,
-		requestDate: moment()
-	}
-}
+const request = (origin, destination, when, options) =>
+	retry(
+		() => timeout(prices(origin, destination, when, options || {}), 10000),
+		{retries: 3}
+	).catch(console.error)
 
-const formatResults = (resultList) => {
-	let mergedList = []
-	for(let list of resultList){
-		mergedList = mergedList.concat(list)
-	}
-	for(let item of mergedList){
-		delete item.offer.routes
-	}
-	return mergedList
-}
-
-const main = (route) => {
+const main = async (route) => {
 	const dateList = dates(config.days)
-	const resultList = []
+	const data = []
 	for(let date of dateList){
-		resultList.push(prices(route.from, route.to, moment(date).toDate(), config.apiOptions))
+		const result = await request(route.origin, route.destination, moment(date).toDate(), config.apiOptions)
+		if(result) data.push({
+			requestDate: moment().toISOString(),
+			data: result
+		})
 	}
-	return Promise.all(resultList).then(formatResults).then(addRoute(route))
+	return data
 }
 
 module.exports = main

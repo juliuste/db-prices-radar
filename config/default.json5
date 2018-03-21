@@ -1,0 +1,22 @@
+{
+	"days": 84, // 12 weeks
+	"routes": [
+		{"origin": 8011160, "destination": 8002549}, // Berlin Hbf -> Hamburg Hbf
+		{"origin": 8011160, "destination": 8000207}, // Berlin Hbf -> Köln Hbf
+		{"origin": 8011160, "destination": 8000261}, // Berlin Hbf -> München Hbf
+		{"origin": 8011160, "destination": 8000105}, // Berlin Hbf -> Frankfurt a. M. Hbf
+		{"origin": 8011160, "destination": 8000096}, // Berlin Hbf -> Stuttgart Hbf
+		{"origin": 8011160, "destination": 8000085}, // Berlin Hbf -> Düsseldorf Hbf
+		{"origin": 8011160, "destination": 8000080}, // Berlin Hbf -> Dortmund Hbf
+		{"origin": 8011160, "destination": 8000098}, // Berlin Hbf -> Essen Hbf
+		{"origin": 8011160, "destination": 8000050}, // Berlin Hbf -> Bremen Hbf
+		{"origin": 8011160, "destination": 8010205}, // Berlin Hbf -> Leipzig Hbf
+		{"origin": 8011160, "destination": 8010085}, // Berlin Hbf -> Dresden Hbf
+		{"origin": 8011160, "destination": 8000152}, // Berlin Hbf -> Hannover Hbf
+		{"origin": 8011160, "destination": 8000284}  // Berlin Hbf -> Nürnberg Hbf
+	],
+	"returnTrips": true,
+	"apiOptions": { // options for db-prices
+		"class": 2
+	}
+}
