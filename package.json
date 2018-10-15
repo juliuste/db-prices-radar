@@ -24,11 +24,11 @@
 		"streamify.js"
 	],
 	"dependencies": {
-		"config": "^1.30.0",
-		"db-prices": "^3.0.0",
-		"moment-timezone": "^0.5.14",
+		"config": "^2.0.1",
+		"db-prices": "^3.0.1",
+		"moment-timezone": "^0.5.21",
 		"ndjson": "^1.5.0",
-		"p-retry": "^1.0.0",
+		"p-retry": "^2.0.0",
 		"p-timeout": "^2.0.1",
 		"through2-map": "^3.0.0"
 	},

@@ -10,5 +10,5 @@ yarn.lock
 shrinkwrap.yaml
 package-lock.json
 
-data
+*.ndjson
 deploy

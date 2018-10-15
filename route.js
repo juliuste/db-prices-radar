@@ -7,10 +7,10 @@ const retry = require('p-retry')
 const config = require('config')
 
 const dates = (days) => {
-	const startDate = moment()
+	const startDate = moment.tz('Europe/Berlin')
 	const dateList = []
 	for(let i = 0; i<days; i++){
-		dateList.push(moment(startDate).add(i, 'days').tz('Europe/Berlin').startOf('day').toDate())
+		dateList.push(moment.tz(startDate, 'Europe/Berlin').add(i, 'days').startOf('day').toDate())
 	}
 	return dateList
 }
@@ -21,17 +21,18 @@ const request = (origin, destination, when, options) =>
 		{retries: 3}
 	).catch(console.error)
 
-const main = async (route) => {
+const fetchRoute = async (route) => {
 	const dateList = dates(config.days)
 	const data = []
 	for(let date of dateList){
-		const result = await request(route.origin, route.destination, moment(date).toDate(), config.apiOptions)
+		const result = await request(route.origin, route.destination, date, config.apiOptions)
 		if(result) data.push({
-			requestDate: moment().toISOString(),
+			route,
+			requestDate: moment.tz('Europe/Berlin').toISOString(),
 			data: result
 		})
 	}
 	return data
 }
 
-module.exports = main
+module.exports = fetchRoute
