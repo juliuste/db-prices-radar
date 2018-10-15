@@ -1,41 +1,41 @@
 {
-  "name": "db-prices-radar",
-  "description": "Collect and store Deutsche Bahn price information for a set of important routes.",
-  "version": "0.2.0",
-  "keywords": [
-    "bahn",
-    "deutsche",
-    "db",
-    "germany",
-    "railway",
-    "train",
-    "prices",
-    "preise",
-    "deutschland"
-  ],
-  "author": "Julius Tens <mail@juliustens.eu>",
-  "homepage": "https://github.com/juliuste/db-prices-radar",
-  "repository": "juliuste/db-prices-radar",
-  "bugs": "https://github.com/juliuste/db-prices-radar/issues",
-  "main": "./index.js",
-  "files": [
-    "index.js",
-    "route.js",
-    "streamify.js"
-  ],
-  "dependencies": {
-    "config": "^1.30.0",
-    "db-prices": "^3.0.0",
-    "moment-timezone": "^0.5.14",
-    "ndjson": "^1.5.0",
-    "p-retry": "^1.0.0",
-    "p-timeout": "^2.0.1",
-    "through2-map": "^3.0.0"
-  },
-  "devDependencies": {},
-  "scripts": {},
-  "engine": {
-    "node": ">=8"
-  },
-  "license": "ISC"
+	"name": "db-prices-radar",
+	"description": "Collect and store Deutsche Bahn price information for a set of important routes.",
+	"version": "0.2.0",
+	"keywords": [
+		"bahn",
+		"deutsche",
+		"db",
+		"germany",
+		"railway",
+		"train",
+		"prices",
+		"preise",
+		"deutschland"
+	],
+	"author": "Julius Tens <mail@juliustens.eu>",
+	"homepage": "https://github.com/juliuste/db-prices-radar",
+	"repository": "juliuste/db-prices-radar",
+	"bugs": "https://github.com/juliuste/db-prices-radar/issues",
+	"main": "./index.js",
+	"files": [
+		"index.js",
+		"route.js",
+		"streamify.js"
+	],
+	"dependencies": {
+		"config": "^1.30.0",
+		"db-prices": "^3.0.0",
+		"moment-timezone": "^0.5.14",
+		"ndjson": "^1.5.0",
+		"p-retry": "^1.0.0",
+		"p-timeout": "^2.0.1",
+		"through2-map": "^3.0.0"
+	},
+	"devDependencies": {},
+	"scripts": {},
+	"engine": {
+		"node": ">=8"
+	},
+	"license": "ISC"
 }
